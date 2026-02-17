@@ -3,14 +3,15 @@ Katherine Lenshin | 2/19/2026 | assignment_03
 
 assignment_03 tasks accomplished
 ---------------------------------------------
-Created subdirectory for data in assignment_03 folder, put data into the .gitignore (so as not to push data to GitHub)
-imported and unzipped A. thalliana genomic data into said data folder
-Ran Unix commands from the command line to examine the contents of the genomic data
+- Created subdirectory for data in assignment_03 folder, put data into the .gitignore (so as not to push data to GitHub)
+- Imported and unzipped A. thalliana genomic data into said data folder
+- Ran Unix commands from the command line to examine the contents of the genomic data
 
 
 assignment_03 directory structure
 ---------------------------------------------
 [9 kdlenshin@bora ~/repos/SUPERCOMPUTING/assignments/assignment_03 ]$ls -R
+
 .:
 data  README.md
 
@@ -21,51 +22,64 @@ GCF_000001735.4_TAIR10.1_genomic.fna
 commands used
 ---------------------------------------------
 git pull
+
 cd assignments/assignment_03
+
 mkdir data
+
 cd data
+
 wget https://gzahn.github.io/data/GCF_000001735.4_TAIR10.1_genomic.fna.gz
+
 gunzip GCF_000001735.4_TAIR10.1_genomic.fna.gz
+
 cd ..
+
 cd ..
+
 cd ..
+
 nano .gitignore
+
 --> add to .gitignore assignments/assignment_03/data/*.fna
+
 data="GCF_000001735.4_TAIR10.1_genomic.fna"
 
 grep -c ">" $data 
-7
+>7
 
 grep -v ">" $data | tr -d '\n' | wc -c 
-119668634
+>119668634
 
 cat $data | wc -l
-14
+>14
 
 grep ">" $data | grep "mitochondrion" | wc -l
-1
+>1
 
 grep ">" $data | grep "chromosome" | wc -l
-5
+>5
 
 grep -v ">" $data | head -n 1 | wc -c
-30427672
+>30427672
+
 grep -v ">" $data | head -n 2 | tail -n 1 | wc -c
-19698290
+>19698290
+
 grep -v ">" $data | head -n 3 | tail -n 1 | wc -c
-23459831
+>23459831
 
 grep -A 1 "chromosome 5" $data| tail -n 1 | wc -c
-26975503
+>26975503
 
 grep "AAAAAAAAAAAAAAAA" $data| wc -l
-1
+>1
 
 grep ">" $data | sort | head -n 1
 >NC_000932.1 Arabidopsis thaliana chloroplast, complete genome
 
 paste -d '\t' <(grep ">" $data) <(grep -v ">" $data)
-# output is massive and will not be in this readme.
+>output is massive and will not be in this readme.
 
 reflection
 ---------------------------------------------
