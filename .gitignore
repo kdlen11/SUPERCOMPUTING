@@ -1,0 +1,3 @@
+# data directories for assignments
+assignments/assignment_02/data/*.gz
+assignments/assignment_03/data/*.fna
