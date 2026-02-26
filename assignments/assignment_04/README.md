@@ -97,4 +97,4 @@ As the complexity of the assignments increases, as does the number of correct, p
 
 I learned a lot of very useful things over the course of this assignment! Namely I learned the syntax for installing and using external packages (which will be incredibly useful moving forward, especially into our final projects), and additionally I learned For Loop syntax in unix (which will also be incredibly useful).
 
-$PATH is a beautiful thing -- it is an envireonmental variable which exists in .our bashrc and directs the computer to the directories in which all available programs live, so that those programs can be called from any directory and run properly (even though they are not being run in that exact file location where they exist).
+$PATH is a beautiful thing -- it is an environment variable which exists in .our bashrc and directs the computer to the directories in which all available programs live, so that those programs can be called from any directory and run properly (even though they are not being run in that exact file location where they exist).
