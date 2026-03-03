@@ -126,10 +126,10 @@ for file in ${BASE_DIR}/data/raw/*_R1_*;do ./scripts/02_run_fastp.sh ${file}; do
 
 ## In order to run this code...
 1. Clone the repository onto your own machine
-2. Create the following directories from root:
+2. Create the following directories inside `assignment_05`:
 - `data/raw`
 - `data/trimmed`
 3. Modify the following two scripts to ensure the base paths which they use align with yours:
 - `./scripts/01_download_data.sh`
 - `./pipeline.sh`
-4. from the root directory, run `bash pipeline.sh`
+4. from `assignment_05`, run `bash pipeline.sh`
