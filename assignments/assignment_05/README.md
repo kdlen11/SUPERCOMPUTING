@@ -1,4 +1,4 @@
-# Katherine Lenshin | assignment_5 | 04 March 2026
+# Katherine Lenshin | assignment_05 | 04 March 2026
 ---
 ## In this assignment, I…
 ### 1. created a script (`./scripts/01_download_data.sh`) which downloads a fastq data tarball from github, and unpacks its contents into `./data/raw`.
