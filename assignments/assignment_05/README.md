@@ -133,3 +133,16 @@ for file in ${BASE_DIR}/data/raw/*_R1_*;do ./scripts/02_run_fastp.sh ${file}; do
 - `./scripts/01_download_data.sh`
 - `./pipeline.sh`
 4. from `assignment_05`, run `bash pipeline.sh`
+
+<details>
+<summary> <h2>Some reflections on this assignment... </h2></summary>
+        
+The most challenging portion of this assignment was definitely the filepaths. This is what we primarily focused on in class during lesson 5 -- making filepaths work between different scripts which exist in different folders, modifying and pulling from data folders which also exist in completely separate places. I managed to brute-force the filepaths to work by using near-absolute paths in my data download and pipeline scripts, but this is an inelegant solution which relies on having not only a SUPERCOMPUTING directory identical to mine, but also a larger identically named `repos` folder where `SUPERCOMPUTING` lives.
+
+I did learn a lot about relative and absolute filepaths in the process of making these scripts, of course, and I also learned about fastp (which was incredibly convenient to use -- there is no wonder it is as popular as it is!). I learned about the ability to call and use different filepaths within scripts themselves, and I learned the cool replacement trick of using ${root_dir/dir1/file.gz/dir1/dir2} to change the sub-folder of a file without having to manually enter and move files from one folder to another.
+
+As I understand it, we split the two scripts and then called them with an overall pipeline for the sake of modularity. For one, the process of debugging is much easier. When the final pipeline script fails, it is easy to tell which script in the pipeline failed, and only have to debug that specific portion of code. This also has the added benefit of making the ultimate directory quite clean in its folder organization, allowing for easier readability and comprehension for people looking at the code for the first time. Finally, the modularization of scripts allows each script to be resued in different pipelines, without ever needing to be rewritten.
+
+There are far less cons to modularization than pros, which is why it is encouraged, but the one frustrating part that comes with modularization of code (which I have elaborated upon above) is that there are often issues with dependencies amongst scripts that often need resolving.
+</details>
+
