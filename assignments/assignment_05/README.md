@@ -1,7 +1,7 @@
 # Katherine Lenshin | assignment_5 | 04 March 2026
 ---
-# In this assignment, I…
-## 1. created a script (`./scripts/01_download_data.sh`) which downloads a fastq data tarball from github, and unpacks its contents into `./data/raw`.
+## In this assignment, I…
+### 1. created a script (`./scripts/01_download_data.sh`) which downloads a fastq data tarball from github, and unpacks its contents into `./data/raw`.
 <details>
 <summary>click to view code...</summary>
         
@@ -56,7 +56,7 @@ rm fastq_examples.tar
 > exec bash
 </details>
 
-## 2. created another script (`./scripts/02_run_fastp.sh`) which runs a fastp protocol on R1 and R2 .gz files, trimming them and adding the outputs to `./data/trimmed/`).
+### 2. created another script (`./scripts/02_run_fastp.sh`) which runs a fastp protocol on R1 and R2 .gz files, trimming them and adding the outputs to `./data/trimmed/`).
 <details>
 <summary>click to view code...</summary>
         
@@ -95,7 +95,7 @@ fastp \
 ```
 </details>
 
-## 3. created a pipeline script in root (`pipeline.sh`) which links the two scripts together, and runs them in a loop on all of the downloaded .gz files.
+### 3. created a pipeline script in root (`pipeline.sh`) which links the two scripts together, and runs them in a loop on all of the downloaded .gz files.
 <details> 
 <summary>click to view code...</summary>
         
@@ -123,3 +123,13 @@ for file in ${BASE_DIR}/data/raw/*_R1_*;do ./scripts/02_run_fastp.sh ${file}; do
 
 \# profit
 </details>
+
+## In order to run this code...
+1. Clone the repository onto your own machine
+2. Create the following directories from root:
+- `data/raw`
+- `data/trimmed`
+3. Modify the following two scripts to ensure the base paths which they use align with yours:
+- `./scripts/01_download_data.sh`
+- `./pipeline.sh`
+4. from the root directory, run `bash pipeline.sh`
