@@ -6,3 +6,8 @@ lessons/lesson_05/data/*.fastq
 assignments/assignment_05/data/raw/*.gz 
 assignments/assignment_05/data/trimmed/*.gz
 assignments/assignment_06/data/*.fastq
+assignments/assignment_07/data/raw/*.fastq
+assignments/assignment_07/data/clean/*.fastq
+assignments/assignment_07/data/dog_reference/*.fna
+
+
