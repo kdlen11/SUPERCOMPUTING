@@ -9,7 +9,7 @@ assignments/assignment_06/data/*.fastq
 assignments/assignment_07/data/raw/*.fastq
 assignments/assignment_07/data/clean/*.fastq
 assignments/assignment_07/data/dog_reference/*.fna
-assignments/assignment_07/ref
+assignments/assignment_07/ref/
 assignments/assignment_07/output/*.sam
 assignments/assignment_07/data/*.csv
 assignments/assignment_07/*.err
