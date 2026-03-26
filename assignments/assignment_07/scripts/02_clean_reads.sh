@@ -13,12 +13,12 @@ for run in $(cut -d ',' -f1 SraRunTable.csv | tail -n +2);do
         --out2 "clean/${run}_2.fastq" \
         --json /dev/null \
         --html /dev/null \
-        --trim_front1 8 \
-        --trim_front2 8 \
-        --trim_tail1 20 \
-        --trim_tail2 20 \
+        --trim_front1 5 \
+        --trim_front2 5 \
+        --trim_tail1 10 \
+        --trim_tail2 10 \
         --n_base_limit 0 \
-        --length_required 100 \
+        --length_required 50 \
         --average_qual 20; done
 
 # return to home directory

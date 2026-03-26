@@ -11,6 +11,8 @@ assignments/assignment_07/data/clean/*.fastq
 assignments/assignment_07/data/dog_reference/*.fna
 assignments/assignment_07/ref/
 assignments/assignment_07/output/*.sam
+assignments/assignment_07/output/*.bam
+assignments/assignment_07/output/*.txt
 assignments/assignment_07/data/*.csv
-assignments/assignment_07/*.err
-assignments/assignment_07/*.out
+assignments/assignment_07/logs/*.err
+assignments/assignment_07/logs/*.out
